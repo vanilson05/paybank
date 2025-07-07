@@ -1,0 +1,382 @@
+.btn {
+  display: inline-block;
+  color: $white-light;
+  transition: .6s ease;
+  padding: 18px 80px 18px 64px;
+  text-align: center;
+  
+  background: linear-gradient(225deg, $primary-normal 8.12%, $secondary-dark 92.21%);
+  border-radius: 10px;
+
+  box-shadow: 0px 7px 56px rgba(92, 118, 46, 0.4);
+
+  @include typeface-1(h7, desktop);
+  @include responsive(s) {
+    @include typeface-1(h7, mobile);
+  }
+
+  position: relative;
+  transition: .7s ease;
+
+  &::after{
+    content: '';
+
+    width: 32px;
+    height: 32px;
+
+    background-image: url('../svg/icon-rect-button.svg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 50%;
+    left: 32px;
+
+    //transform: translate(-50%, -50%);
+
+    animation: rotate-icon-button 12s ease infinite;
+  }
+
+  &::before{
+    content: '';
+
+    width: 52px;
+    height: 40px;
+
+    background-image: url('../svg/icon-arrow-right.svg');
+    background-size: 44%;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 50%;
+    right: -20px;
+
+    border-left: 2px solid rgba(255,255,255,0.25);
+
+    transform: translate(-50%, -50%);
+
+    transition: 0.5s ease;
+  }
+
+  &:hover{
+    &::before{
+      transform: translate(-50%, -50%) translate3d(6px, 0, 0);
+    }
+  }
+}
+
+@keyframes rotate-icon-button{
+  0%{
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100%{
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.btn-small {
+  display: inline-block;
+  color: $white-light;
+  transition: .6s ease;
+  padding: 12px 28px 12px 28px;
+  text-align: center;
+  
+  background: linear-gradient(225deg, $primary-normal 8.12%, $secondary-dark 92.21%);
+  border-radius: 10px;
+
+  box-shadow: 0px 7px 32px rgba(92, 118, 46, 0.6);
+
+  @include typeface-1(h7, desktop);
+  @include responsive(s) {
+    @include typeface-1(h7, mobile);
+  }
+
+  position: relative;
+
+}
+
+.btn-secondary {
+  display: inline-block;
+  color: $white-light;
+  transition: .6s ease;
+  padding: 18px 40px;
+  text-align: center;
+  border: 0;
+
+  background: transparent;
+  border: 2px solid $black-lighten;
+  border-radius: 12px;
+
+  @include typeface-1(h7, desktop);
+  @include responsive(s) {
+    @include typeface-1(h7, mobile);
+  }
+
+  &:hover{
+    //opacity: .8;
+    border: 2px solid $black-lighten;
+    background: $black-normal;
+  }
+}
+
+.link-black{
+  color: $black-lighten;
+}
+
+.btn-freq{
+  display: inline-block;
+  background: linear-gradient(225deg, $primary-normal 8.12%, $secondary-dark 92.21%);
+
+  padding: 16px 64px 16px 24px;
+  border-radius: 8px;
+  transform: skewX(-10deg);
+
+  position: relative;
+
+  @include typeface-1(h7, desktop);
+  @include responsive(s) {
+    @include typeface-1(h7, mobile);
+  }
+
+  &::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 16px;
+
+    width: 18px;
+    height: 18px;
+
+    transform: translate(-50%, -50%);
+
+    background-image: url('../../svg/icon-arrow-right.svg');
+    background-size: cover;
+    transition: .5s ease;
+
+    z-index: -1;
+  }
+
+  &::before{
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 12px;
+
+    width: 100%;
+    height: 100%;
+
+    border: 2px solid $secondary-dark;
+    border-radius: 8px;
+    transition: .5s ease;
+
+    //z-index: -1;
+  }
+
+  &:hover{
+    &::before{
+      top: -16px;
+      left: 16px;
+    }
+
+    &::after{
+      top: 50%;
+      right: 8px;
+    }
+  }
+  
+}
+
+.btn-white{
+  color: $black-light;
+
+  background-color: $white-light;
+  padding: 12px 24px;
+  border-radius: 8px;
+
+  transition: .5s ease;
+
+  &:hover{
+    box-shadow: 0px 3px 16px rgba(44, 64, 10, 0.2);
+  }
+}
+
+.fill-svg-green{
+  path{
+    fill: $primary-light;
+  }
+}
+
+
+a{
+  @include typeface-2(p3, desktop);
+  text-decoration: none;
+  color: $white-light;
+  transition: 0.5s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.underline{
+
+  position: relative;
+
+  &::after{
+    content: '';
+    position: absolute;
+
+    top: 100%;
+    left: 50%;
+
+    width: 80%;
+    height: 1px;
+    transform: translate(-50%, -50%);
+
+    background-color: $white-light;
+
+    transition: .3s ease;
+  }
+
+  &:hover{
+    &::after{
+      width: 100%;
+    }
+  }
+}
+
+
+.link{
+  color: $white-light;
+
+  @include typeface-1(h6, desktop);
+  @include responsive(s) {
+    @include typeface-1(h6, mobile);
+  }
+
+  padding: 18px 52px 18px 24px;
+  position: relative;
+  border-radius: 16px;
+
+  background-color: $black-normal;
+  border: 3px solid $black-lighten;
+
+  &::before{
+    content: '';
+    position: absolute;
+
+    top: 50%;
+    right: 7%;
+
+    width: 28px;
+    height: 28px;
+
+    transform: translate(-50%, -50%) translate3d(10px,0,0);
+
+    background-image: url('../svg/icon-blank.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    transition: .5s ease;
+  }
+
+  &:hover{
+    border: 3px solid $secondary-dark;
+    &::before{
+      transform: translate(-50%, -50%) translate3d(12px,-4px,0);
+    }
+  }
+}
+
+.link-footer{
+  padding: 8px 8px 8px 8px;
+
+  transition: .7s ease;
+
+  &:hover{
+    padding: 8px 8px 8px 16px;
+  }
+}
+
+.btn-send{
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(217.08deg, $secondary-dark 2.12%, $primary-dark 98.96%);
+  border: 0;
+  border-radius: 8px;
+}
+
+input {
+  accent-color: $primary-normal;
+}
+
+/*
+input[type=text]{
+  padding: 8px 12px;
+  background-color: $black-light;
+  border: 0;
+  border-radius: 4px;
+  color: $white-light;
+
+  @include typeface-2(p3, desktop);
+}
+*/
+
+input, select, option, textarea{
+  padding: 12px 16px;
+  background-color: $white-light;
+  border: 2px solid $white-light;
+  border-radius: 12px;
+  color: $black-lighten;
+  width: 100%;
+
+  @include typeface-2(p3, desktop);
+
+  &:focus{
+    border: 2px solid $white-normal;
+  }
+}
+
+.label-error{
+  color: $red-normal;
+  text-align: right;
+  display: none;
+}
+
+.label-active{
+  display: block;
+}
+
+.border-error{
+  background-color: $black-light;
+  border: 2px solid $red-normal;
+}
+
+.border-success{
+  background-color: $black-light;
+  border: 2px solid $green-normal;
+}
+
+
+input[type=date], select, option{
+  height: 44px;
+}
+
+.box-form{
+  min-width: 420px;
+
+  @include responsive(s){
+    max-width: 420px;
+    min-width: 300px;
+  }
+}
+
+/*
+select{
+  appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+*/

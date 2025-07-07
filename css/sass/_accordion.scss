@@ -1,0 +1,84 @@
+
+.accordion-button{
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: left;
+    background-color: transparent;
+    position: relative;
+    padding: 24px 36px 24px 40px;
+
+    border-bottom: 2px solid $black-light;
+    transition: 0.7s ease;
+
+    color: $white-normal;
+    @include typeface-1(h6, desktop);
+    @include responsive(s) {
+        @include typeface-1(h6, mobile);
+    }
+
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+
+        width: 32px;
+        height: 32px;
+
+        transform: translate(0, -50%);
+
+        transition: 1s ease;
+
+        background-image: url('../svg/icon-check3.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 40%;
+        right: 24px;
+
+        width: 20px;
+        height: 20px;
+        border-radius: 2px;
+        transition: .5s ease;
+
+        background-image: url('../svg/icon-plus.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        transform: rotate(90deg);
+    }
+
+    &:hover{
+        padding-left: 48px;
+    } 
+}
+
+.accordion-button-active{
+    position: relative;
+
+    &::before{
+        transform: rotate(315deg);
+    }
+}
+
+.accordion-content{
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .5s ease;
+
+    &:target{
+        overflow: auto;
+        max-height: 300px;
+    }
+
+}
+

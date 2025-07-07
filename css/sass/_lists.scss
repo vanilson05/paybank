@@ -1,0 +1,81 @@
+
+.list{
+    list-style: none;
+  
+    li{
+      @include typeface-2(p3, desktop);
+      @include responsive(s) {
+        @include typeface-2(p3, mobile);
+      }
+
+      color: $gray-5;
+      position: relative;
+      padding-left: 28px;
+
+      transition: .4s ease;
+      margin: 4px 0px;
+
+      &::after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+
+        transform: translate(0, -50%);
+
+        width: 18px;
+        height: 18px;
+
+        background-image: url('../../svg/icon-check.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      &:hover{
+        padding-left: 30px;
+      }
+
+    }
+  }
+
+
+  
+.list2{
+  list-style: none;
+
+  li{
+    @include typeface-2(p2, desktop);
+    @include responsive(s) {
+      @include typeface-2(p2, mobile);
+    }
+
+    color: $gray-7;
+    position: relative;
+    padding-left: 28px;
+
+    transition: .4s ease;
+    margin: 4px 0px;
+
+    &::after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      transform: translate(0, -50%);
+
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+
+      background-image: url('../../svg/icon-check3.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &:hover{
+      padding-left: 30px;
+    }
+
+  }
+}

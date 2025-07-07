@@ -1,0 +1,131 @@
+// Colors of project
+
+// Brand-colors
+$primary-dark: #515D3D;
+$primary-normal: #65744D;
+$primary-light: #849170;
+
+$secondary-dark: #A9C96B;
+$secondary-normal: #D2F988;
+$secondary-light: #DCFD9E;
+
+// Neutral-colors
+$black-dark: #060802;
+$black-normal: #12140D;
+$black-light: #1A1C15;
+$black-lighten: #2F3329;
+$black-darken: #090F1D;
+
+$white-darken: #CCD2C1;
+$white-dark: #E8EDDF;
+$white-normal: #F2F7E9;
+$white-light: #FBFFF5;
+
+// Gray Scale
+$gray-1: #252626;
+$gray-2: #353536;
+$gray-3: #4C4C4D;
+$gray-4: #646465;
+$gray-5: #7C7C7D;
+$gray-6: #949494;
+$gray-7: #9EA0A3;
+
+
+// Auxiliary colors
+$red-normal: #F03D3D;
+$red-dark: #d03333;
+$red-light: #f05454;
+
+$green-normal: #0BB07B;
+$green-dark: #28bb49;
+$green-light: #50e170;
+
+$yellow-normal: #FFCE52;
+$yellow-dark: #d9b043;
+$yellow-light: #ffd76b;
+
+.color-white{
+    color: $white-normal;
+}
+
+.color-black{
+    color: $black-light;
+}
+
+.color-primary{
+    color: $primary-normal;
+}
+
+.color-gradient{
+    display: inline-block;
+    background: linear-gradient(224.78deg, $primary-normal 8.12%, $secondary-dark 92.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.color-gradient{
+    display: inline-block;
+    background: linear-gradient(224.78deg, $primary-normal 8.12%, $secondary-dark 92.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.color-gradient2{
+    display: inline-block;
+    background: linear-gradient(270deg, #1141BD 0.95%, #6BBAFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient{
+    background: linear-gradient(224.78deg, $primary-dark 8.12%, $secondary-dark 92.21%);
+}
+
+.label{
+    background: linear-gradient(224.78deg, $primary-normal 8.12%, $secondary-dark 92.21%); 
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 2px;
+
+    color: $black-dark;
+}
+
+.color-gray{
+    color: $gray-5;
+}
+
+.color-red{
+    color: $red-normal;
+}
+
+.color-green{
+    color: $green-normal;
+}
+
+.color-yellow{
+    color: $yellow-normal;
+}
+
+.bg-red{
+    background-color: $red-normal;
+}
+
+.bg-green{
+    background-color: $green-normal;
+}
+
+.bg-yellow{
+    background-color: $yellow-normal;
+}
+
+.bg-black{
+    background-color: $black-dark;
+}
+
+.bg-black-light{
+    background-color: $black-light;
+}
+
+
+
+
